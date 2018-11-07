@@ -13,8 +13,11 @@ attr_accessor :total, :discount
   end
 
   def apply_discount
+    if @discount = 0 then "There is no discount to apply."
+    else
     @total = (@total*(1-@discount.to_f/100))
     "After the discount, the total comes to $#{@total.round}."
+  end
   end
 
 end
